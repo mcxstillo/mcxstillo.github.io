@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<!--  white red yellow (pataas)  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Edit Mode</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/edit_styles.css">
+</head>
+
+<body class="d-lg-flex justify-content-lg-center align-items-lg-center">
+
+    <div id="login" class="login-clean" style="width: 100%;height: 100%;">
+        <form id="login-form" method="post">
+            <div class="form-group"><input class="form-control" type="email" id="login-email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="login-pass" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(255,193,7);color: #363739;">Log In</button></div>
+        </form>
+    </div>
+
+    <!-- Container for sidebar navigation -->
+    <div id="header" class="sidebar float-left d-lg-flex align-items-center justify-content-xl-start" style="width: 9%;height: 100%;">
+        <ul id="sidebar" class="logged-out nav nav-tabs justify-content-lg-center align-items-lg-center flex-column" style="width: 78px;height: 100%;">
+            <li class="nav-item" id="nav-button"><a class="nav-link active text-left bg-warning border rounded-circle shadow-none" id="nav-icon" href="#homepage" style="border-width: 1px;background-color: rgb(255,255,255);"><i class="fa fa-home shadow-none"></i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#about-us"><i class="material-icons">person</i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#education"><i class="material-icons">school</i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#org_main"><i class="material-icons">group</i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#portfolio"><i class="icon ion-code-working"></i></a></li>
+        </ul>
+    </div>
+
+    <!--  Homepage section with greeting  -->
+    <div id="homepage" class="logged-out container float-right " style="height: 50%; width: 82%;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);margin-bottom: 50px;margin-top: 150px;">
+            <h2 class="display-2 w3-animate-top" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Hello, I'm Maia</h2>
+            <p style="color: rgb(33,36,40);font-family: Alef, sans-serif;">Get to know me more as you explore this online resume!</p>
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17); margin-top: 70px;"></div>
+         </div>
+
+
+        <!--  About me section  -->
+        <div id="spacer"></div>
+        <div id="about-us" class="container w3-animate-top" style="height: 50%; width: 100%;">
+            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About
+                    <button class="collapsible">Edit</button>
+                    <div class="content">
+                        <form id="aboutform">
+                            <br>
+                            <label>Description </label><br>
+                            <textarea id="desc" name="desc" rows="4" cols="17" form="aboutform"></textarea><br>
+                            <label>Email </label><br>
+                            <input type="email" id="about_email"><br>
+                            <label>Facebook Link </label><br>
+                            <input type="text" id="fb"><br>
+                            <label>Twitter Link </label><br>
+                            <input type="text" id="twt"><br>
+                            <label>GitHub Link </label><br>
+                            <input type="text" id="git"><br> 
+                            <button type="submit">Submit</button> 
+                        </form>
+                    </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
+            </div>
+            <div class="card float-left" style="width: 100%;background-color: rgba(255,255,255,0);border-style: none;border-color: rgba(0,0,0,0);margin-top: 30px;">
+                <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+                <div id="about_body" class="card-body" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
+                    <h1 class="text-left float-none card-title" id="name-heading" style="width: 70%;color: #32363b;font-family: Lora, serif;font-size: 2.5rem;">Maia Mikaela S. Castillo</h1>
+                </div>
+            </div>
+        </div>
+    
+    <div id="spacer" style="width: 100%; height: 1000px;"></div>
+
+    <!--  Education section  -->
+    <div id="education" class="row container w3-animate-top" style="width: 100%;padding: 0;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+            <h2 class="display-2" style="color: rgb(50,54,59);">Education  
+                <button class="collapsible">Add</button>
+                <div class="content">
+                    <form id="edu-form">
+                        <br>
+                        <label>Degree: </label><br>
+                        <input type="text" id="degree"><br>
+                        <label>School: </label><br>
+                        <input type="text" id="school"><br>
+                        <label>Start Year: </label><br>
+                        <input type="number" id="start"><br>
+                        <label>End Year: </label><br>
+                        <input type="number" id="end"><br><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
+        </div>
+        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
+            <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
+    </div>
+    
+    <div id="spacer" style="height: 300px;"></div>
+
+        <!--  Organizations section  -->
+        <div id="org_main" class="row container w3-animate-top" style="width: 100%;">
+            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+                <h2 class="display-2" style="color: rgb(50,54,59);">Organizations <button class="collapsible">Add</button>
+                <div class="content">
+                    <form id="org-form">
+                        <br>
+                        <label>Name of Organization: </label><br>
+                        <input type="text" id="name"><br>
+                        <label>Position: </label><br>
+                        <input type="text" id="position"><br>
+                        <label>Year: </label><br>
+                        <input type="number" id="year"><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
+            </div>
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+        </div>
+
+    <div id="spacer" style="width: 100%; height: 1000px;"></div>
+
+        <!--  Portfolio section  -->
+        <div id="portfolio"></div>
+        <div id="works_main" class="container w3-animate-top" style="width: 100%; margin-bottom: 75px;">
+            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio  <button class="collapsible">Add</button>
+                    <div class="content">
+                        <form id="work-form">
+                            <br>
+                            <label>Project Title: </label><br>
+                            <input type="text" id="title"><br>
+                            <label>Subject: </label><br>
+                            <input type="text" id="subject"><br>
+                            <label>Description: </label><br>
+                            <input type="text" id="desc"><br>
+                            <label>Link: </label><br>
+                            <input type="text" id="link"><br><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
+            </div>
+            <div id="works" class="row" style="margin-top: 0.75rem;width: 100%;">
+                
+            </div>
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+        authDomain: "apdev-resume.firebaseapp.com",
+        databaseURL: "https://apdev-resume.firebaseio.com",
+        projectId: "apdev-resume",
+        storageBucket: "apdev-resume.appspot.com",
+        messagingSenderId: "719658931741",
+        appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+        measurementId: "G-18CEGZNK5S"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/edit.js"></script>
+</body>
+
+</html>
