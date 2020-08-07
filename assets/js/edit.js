@@ -1,3 +1,19 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+    authDomain: "apdev-resume.firebaseapp.com",
+    databaseURL: "https://apdev-resume.firebaseio.com",
+    projectId: "apdev-resume",
+    storageBucket: "apdev-resume.appspot.com",
+    messagingSenderId: "719658931741",
+    appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+    measurementId: "G-18CEGZNK5S"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
 /* Form queries to fetch data in the html */
 const loginForm = document.getElementById('login-form');
 
@@ -38,19 +54,27 @@ function displayAbout (doc) {
 
     let desc = document.createElement('p');
     desc.setAttribute('id', 'about-desc');
-    desc.setAttribute('class', 'p-about');
     desc.textContent = doc.data().desc;
 
-    let email = document.createElement('p');
-    email.setAttribute('class', 'p-about');
-    email.textContent = doc.data().email;
+    let email = document.createElement('div');
+    email.setAttribute('class', 'email');
+
+    let outro = document.createElement('p');
+    outro.classList.add('email');
+    outro.textContent =  "Contact me in my email or any of the links below!"
+
+    let add = document.createElement('p');
+    add.classList.add('email');
+    add.textContent = "Email:  " + doc.data().email;
+
+    email.appendChild(outro);
+    email.appendChild(add);
 
     about_card.appendChild(desc);
     about_card.appendChild(email); 
 
     let socicons = document.createElement('div');
     socicons.setAttribute('id', 'soc_icons');
-    socicons.setAttribute('style', 'width:70%; text-align: center; height: 3rem;');
 
     about.appendChild(socicons);
 
